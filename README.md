@@ -1,73 +1,63 @@
-# React + TypeScript + Vite
+🚀 Interactive 3D Portfolio
+A visually immersive, responsive, and high-performance personal portfolio built to showcase creative development work. This project leverages 3D graphics and advanced animations to create a unique user journey.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🛠️ Tech Stack
+Frontend: React.js
 
-Currently, two official plugins are available:
+3D Graphics: Three.js (via @react-three/fiber & @react-three/drei)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Animations: GSAP (GreenSock Animation Platform)
 
-## React Compiler
+Styling: CSS3 / Tailwind CSS
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Deployment: Vercel 
 
-## Expanding the ESLint configuration
+✨ Key Features
+Interactive 3D Elements: Smooth 3D model rendering and environment mapping using Three.js.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Scroll-Triggered Animations: Complex sequences and transitions powered by GSAP ScrollTrigger.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Fully Responsive: Optimized experience across mobile, tablet, and desktop screens.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+Performance Optimized: Efficient asset loading and component memoization for smooth 60FPS interactions.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Dynamic UI: Interactive contact forms and project galleries.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+🚀 Getting Started
+To run this project locally, follow these steps:
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Clone the repository:
+
+Bash
+git clone https://github.com/RAJUKUMAR-LAB/portfolio-me
+Install dependencies:
+
+Bash
+npm install
+# or
+yarn install
+Run the development server:
+
+Bash
+npm run dev
+Open in browser:
+Navigate to http://localhost:5173 (or the port specified in your terminal).
+
+📂 Project Structure
+Plaintext
+├── public/          # 3D Models (.glb/.gltf) and textures
+├── src/
+│   ├── components/  # Reusable UI and 3D Canvas components
+│   ├── hooks/       # Custom GSAP and interaction hooks
+│   ├── sections/    # Hero, About, Projects, Contact
+│   └── App.jsx      # Main entry point
+└── tailwind.config.js
+🤝 Contact
+Feel free to reach out if you have questions or want to collaborate!
+
+GitHub: @RAJUKUMAR-LAB
+
+LinkedIn: Rishabh Kumar
+
+Portfolio: your-domain.com
