@@ -1,0 +1,338 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 0%;
+    --foreground: 0 0% 100%;
+    --card: 0 0% 7%;
+    --card-foreground: 0 0% 100%;
+    --popover: 0 0% 5%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 78 91% 63%;
+    --primary-foreground: 0 0% 0%;
+    --secondary: 0 0% 11%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 78%;
+    --accent: 78 91% 63%;
+    --accent-foreground: 0 0% 0%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 24%;
+    --input: 0 0% 15%;
+    --ring: 78 91% 63%;
+    --radius: 0.625rem;
+    
+    --lime: #C0F748;
+    --lime-dark: #A8E030;
+    --black: #000000;
+    --dark-gray: #111111;
+    --medium-gray: #3D3D3D;
+    --light-gray: #C8C8C8;
+    --white: #FFFFFF;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-black text-white antialiased;
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+  }
+  
+  ::selection {
+    background: var(--lime);
+    color: var(--black);
+  }
+}
+
+/* Typography */
+.font-display {
+  font-family: 'Bebas Neue', sans-serif;
+}
+
+.font-body {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--black);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--medium-gray);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--lime);
+}
+
+/* Grain Overlay */
+.grain-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.03;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+}
+
+/* Glow Effects */
+.glow-lime {
+  box-shadow: 0 0 20px rgba(192, 247, 72, 0.3),
+              0 0 40px rgba(192, 247, 72, 0.2),
+              0 0 60px rgba(192, 247, 72, 0.1);
+}
+
+.text-glow-lime {
+  text-shadow: 0 0 10px rgba(192, 247, 72, 0.5),
+               0 0 20px rgba(192, 247, 72, 0.3),
+               0 0 30px rgba(192, 247, 72, 0.2);
+}
+
+/* Magnetic Button Effect */
+.magnetic-btn {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Stroke Text */
+.stroke-text {
+  -webkit-text-stroke: 2px var(--lime);
+  color: transparent;
+}
+
+/* Fluid Canvas */
+.fluid-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+/* Particle Canvas */
+.particle-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+/* Custom Animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(192, 247, 72, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(192, 247, 72, 0.6);
+  }
+}
+
+@keyframes breathe {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+}
+
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.animate-breathe {
+  animation: breathe 4s ease-in-out infinite;
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient-shift 8s ease infinite;
+}
+
+/* Input Focus Effects */
+.input-glow:focus {
+  border-color: var(--lime);
+  box-shadow: 0 0 0 3px rgba(192, 247, 72, 0.2);
+}
+
+/* Card Hover Effects */
+.card-hover {
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-hover:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4),
+              0 0 30px rgba(192, 247, 72, 0.1);
+}
+
+/* Line Draw Animation */
+.line-draw {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+}
+
+/* Horizontal Scroll Container */
+.horizontal-scroll {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.horizontal-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.horizontal-scroll > * {
+  scroll-snap-align: start;
+  flex-shrink: 0;
+}
+
+/* Skew on scroll */
+.skew-scroll {
+  transition: transform 0.1s ease-out;
+}
+
+/* Reveal Animation Classes */
+.reveal-up {
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.reveal-up.revealed {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Navigation */
+.nav-blur {
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  background: rgba(0, 0, 0, 0.8);
+}
+
+/* Section Spacing */
+.section-padding {
+  @apply px-4 sm:px-6 lg:px-8 xl:px-16 2xl:px-24;
+}
+
+/* Responsive Typography */
+.text-hero {
+  font-size: clamp(3rem, 12vw, 10rem);
+  line-height: 0.9;
+}
+
+.text-section {
+  font-size: clamp(2rem, 6vw, 5rem);
+  line-height: 1;
+}
+
+/* Tool Tag */
+.tool-tag {
+  @apply px-4 py-2 rounded-full border border-[#3D3D3D] text-sm text-[#C8C8C8] transition-all duration-300;
+}
+
+.tool-tag:hover {
+  @apply border-[#C0F748] text-[#C0F748] bg-[#C0F748]/10;
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(192, 247, 72, 0.2);
+}
+
+/* Process Node */
+.process-node {
+  @apply relative;
+}
+
+.process-node::before {
+  content: '';
+  @apply absolute w-4 h-4 rounded-full bg-[#C0F748] -left-2 top-1/2 -translate-y-1/2;
+  box-shadow: 0 0 20px rgba(192, 247, 72, 0.5);
+}
+
+/* Liquid Button Fill */
+.liquid-fill {
+  position: relative;
+  overflow: hidden;
+}
+
+.liquid-fill::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: var(--lime);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.6s cubic-bezier(0.16, 1, 0.3, 1), 
+              height 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.liquid-fill:hover::before {
+  width: 300%;
+  height: 300%;
+}
+
+.liquid-fill span {
+  position: relative;
+  z-index: 1;
+}
+
+.liquid-fill:hover span {
+  color: var(--black);
+}
