@@ -164,7 +164,7 @@ const About = () => {
                       <div className="w-32 h-32 mx-auto mb-6 rounded-full bg-lime/10 border-2 border-lime flex items-center justify-center">
                         <span className="font-display text-5xl text-lime">RK</span>
                       </div>
-                      <p className="text-white font-medium text-lg">Risabh Kumar</p>
+                      <p className="text-white font-medium text-lg">Rishabh Kumar</p>
                       <p className="text-gray-light text-sm">CS Student & AI Enthusiast</p>
                     </div>
                   </div>

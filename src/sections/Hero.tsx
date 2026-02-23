@@ -224,7 +224,7 @@ const Hero = () => {
     return () => ctx.revert();
   }, []);
 
-  const firstName = 'Risabh';
+  const firstName = 'Rishabh';
   const lastName = 'Kumar';
 
   const scrollToProjects = () => {
@@ -364,7 +364,7 @@ const Hero = () => {
                     <div className="w-3 h-3 rounded-full bg-red-500" />
                     <div className="w-3 h-3 rounded-full bg-yellow-500" />
                     <div className="w-3 h-3 rounded-full bg-green-500" />
-                    <span className="ml-4 text-xs text-gray-light">risabh@portfolio:~</span>
+                    <span className="ml-4 text-xs text-gray-light">rishabh@portfolio:~</span>
                   </div>
 
                   {/* Code Content */}
@@ -381,7 +381,7 @@ const Hero = () => {
                         <span className="text-lime mr-2">2</span>
                         <span className="pl-4">
                           <span className="text-cyan-400">name</span>:{' '}
-                          <span className="text-orange-400">&quot;Risabh Kumar&quot;</span>,
+                          <span className="text-orange-400">&quot;Rishabh Kumar&quot;</span>,
                         </span>
                       </div>
                       <div className="flex">

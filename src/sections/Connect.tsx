@@ -110,7 +110,7 @@ const Connect = () => {
   ];
 
   const contactInfo = [
-    { icon: Mail, label: 'Email', value: 'risabh@example.com' },
+    { icon: Mail, label: 'Email', value: 'rishabh@example.com' },
     { icon: Phone, label: 'Phone', value: '+91 98765 43210' },
     { icon: MapPin, label: 'Location', value: 'India' },
   ];

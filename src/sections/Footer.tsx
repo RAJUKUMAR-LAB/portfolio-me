@@ -104,7 +104,7 @@ const Footer = () => {
             <div className="space-y-4">
               <h4 className="text-white font-medium">Get In Touch</h4>
               <div className="space-y-2 text-sm">
-                <p className="text-gray-light">risabh@example.com</p>
+                <p className="text-gray-light">rishabh@example.com</p>
                 <p className="text-gray-light">+91 98765 43210</p>
                 <p className="text-gray-light">India</p>
               </div>
@@ -117,7 +117,7 @@ const Footer = () => {
           {/* Bottom Bar */}
           <div className="pt-8 border-t border-gray-medium flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="text-gray-light text-sm flex items-center gap-1">
-              © {new Date().getFullYear()} Risabh Kumar. Made with{' '}
+              © {new Date().getFullYear()} Rishabh Kumar. Made with{' '}
               <Heart className="w-4 h-4 text-lime fill-lime" /> and lots of coffee.
             </p>
 
